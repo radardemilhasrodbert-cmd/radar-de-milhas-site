@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade · Radar de Milhas</title>
+  <meta name="description" content="Como o Radar de Milhas usa os dados da conta Google do próprio dono.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230F5F8C'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23fff'/%3E%3C/svg%3E">
+  <style>
+    :root { --bg: #f6f8fb; --card: #ffffff; --texto: #1b2430; --suave: #5a6676; --marca: #0f5f8c; --linha: #d9dfe7; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f141a; --card: #171e26; --texto: #e6ebf1; --suave: #9aa6b4; --marca: #5fb0e0; --linha: #2a3440; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+      background: var(--bg); color: var(--texto);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+    main { width: 100%; max-width: 680px; background: var(--card); border: 1px solid var(--linha);
+      border-radius: 16px; padding: 32px 28px; }
+    .marca { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .marca svg { flex: none; }
+    h1 { margin: 0; font-size: 1.6rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1.1rem; margin: 28px 0 8px; }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 16px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .status { display: inline-block; font-size: .85rem; color: var(--marca); border: 1px solid var(--marca);
+      border-radius: 999px; padding: 2px 10px; margin-bottom: 8px; }
+    .contato { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--linha); color: var(--suave); font-size: .95rem; }
+    .contato p { margin: 0 0 6px; }
+    a { color: var(--marca); overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="marca">
+      <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="#0F5F8C"/>
+        <circle cx="16" cy="16" r="8" fill="none" stroke="#fff" stroke-width="2"/>
+        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
+      </svg>
+      <h1>Política de Privacidade</h1>
+    </div>
+    <span class="status">Vigente desde 13 de novembro de 2026</span>
+
+    <h2>O que é o Radar de Milhas</h2>
+    <p>É uma ferramenta pessoal, usada por uma única pessoa, o próprio dono. Ela reúne promoções de passagens e de milhas saindo do Rio de Janeiro. Não é uma empresa, não vende nada e não tem outros usuários.</p>
+
+    <h2>Quais dados do Google o app usa</h2>
+    <ul>
+      <li>O app usa apenas uma conta Gmail: <strong>radardemilhasrodbert@gmail.com</strong>. O dono criou essa conta só para o radar.</li>
+      <li>Essa caixa recebe e-mails de programas de fidelidade (como Smiles, LATAM Pass, Azul Fidelidade, TAP Miles&amp;Go, Livelo e C6). O próprio dono encaminha esses e-mails da conta pessoal dele.</li>
+      <li><strong>Leitura</strong> (permissão <code>gmail.readonly</code>): o app lê esses e-mails para encontrar promoções. Nenhum e-mail é alterado ou apagado.</li>
+      <li><strong>Envio</strong> (permissão <code>gmail.send</code>): o app envia um resumo diário, e só para o e-mail pessoal do dono.</li>
+    </ul>
+
+    <h2>Para onde vão os dados</h2>
+    <ul>
+      <li>O app guarda trechos das promoções (assunto, data, link e o texto da oferta) num banco de dados do próprio dono.</li>
+      <li>O radar roda em horários programados, no computador do dono ou num serviço de automação contratado por ele, sempre em ambiente privado.</li>
+      <li>Para resumir e organizar as ofertas, trechos desses textos são enviados à API da Anthropic (Claude).</li>
+      <li>O resultado, ou seja, as promoções já organizadas, aparece num painel com acesso restrito ao dono (Cloudflare) e nos avisos do Telegram do dono.</li>
+    </ul>
+
+    <h2>O que o app não faz</h2>
+    <ul>
+      <li>Não vende os dados e não os compartilha com terceiros além dos serviços citados acima, que são usados só para o radar funcionar.</li>
+      <li>Não usa os dados para publicidade e não os usa para treinar modelos de inteligência artificial.</li>
+      <li>Não pede senhas, não acessa outras contas do dono, não transfere pontos e não compra passagens.</li>
+    </ul>
+
+    <h2>Como revogar o acesso</h2>
+    <p>Para remover o acesso, abra <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, escolha <strong>Radar de Milhas</strong> e clique em remover. A partir daí, o app não consegue mais ler nem enviar e-mails. O banco de dados é do dono, que pode apagá-lo quando quiser.</p>
+
+    <h2>Política de Dados do Usuário do Google</h2>
+    <p>O uso e a transferência, para qualquer outro app, de informações recebidas das APIs do Google pelo Radar de Milhas seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, incluindo os requisitos de Uso Limitado.</p>
+
+    <h2>Mudanças</h2>
+    <p>Se o funcionamento do app mudar, esta página será atualizada e a data acima também.</p>
+
+    <div class="contato">
+      <p>Contato: <a href="mailto:radardemilhasrodbert@gmail.com">radardemilhasrodbert@gmail.com</a></p>
+      <p><a href="index.html">← Voltar ao início</a></p>
+    </div>
+  </main>
+</body>
+</html>
